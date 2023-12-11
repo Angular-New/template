@@ -17,3 +17,21 @@
   text-transform: capitalize;
   color: darkred;
 }
+
+.header {
+  padding: 20px;
+  background-color: lemonchiffon;
+  border: antiquewhite solid 3px;
+  text-align: center;
+
+  & .title {
+    text-transform: capitalize;
+  }
+
+  & .logo {
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    color: goldenrod;
+  }
+}

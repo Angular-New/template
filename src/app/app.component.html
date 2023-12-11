@@ -1,3 +1,7 @@
+<ng-container
+  *ngTemplateOutlet="headerRef; context: { logoHeader: 'I\'m ng-template', logoTitle: 'awesome logo', $implicit: 'Hi!' }"
+></ng-container>
+
 <tmp-primo>
   <nav class="nav">
     <ul class="menu">
@@ -18,3 +22,18 @@
     </address>
   </footer>
 </tmp-primo>
+
+<ng-template
+  #headerRef
+  let-prefix
+  let-title="logoTitle"
+  let-header="logoHeader"
+>
+  <header class="header">
+    <div class="navigation">
+      <h4 class="title">{{ prefix }} - {{ header }}</h4>
+      <a href="#" class="logo">{{ title }}</a>
+    </div>
+  </header>
+</ng-template>
+
