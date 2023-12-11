@@ -1,0 +1,19 @@
+.menu,
+.footer-list {
+  list-style-type: none;
+  padding: 0 0 0 40px;
+  margin: 20px 0;
+  display: flex;
+}
+
+.menu-item:not(:first-child),
+.footer-list-item:not(:first-child) {
+  margin-left: 16px;
+}
+
+.menu-item-link,
+.footer-list-link {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: darkred;
+}
