@@ -4,3 +4,12 @@
 <ng-content></ng-content>
 <hr>
 <ng-content select=".footer"></ng-content>
+
+<hr>
+
+@for (item of items; track item.title) {
+  <div class="item">
+    <h3>{{ item.title }}</h3>
+    <p>{{ item.description }}</p>
+  </div>
+}

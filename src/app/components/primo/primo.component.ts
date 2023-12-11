@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+
+interface IItem {
+  title: string;
+  description: string;
+}
 
 @Component({
   selector: 'tmp-primo',
@@ -8,5 +13,9 @@ import { Component } from '@angular/core';
   styleUrl: './primo.component.scss'
 })
 export class PrimoComponent {
-
+  public readonly items: IItem[] = [
+    { title: 'title 1', description: 'desc 1' },
+    { title: 'title 2', description: 'desc 2' },
+    { title: 'title 3', description: 'desc 3' }
+  ]
 }

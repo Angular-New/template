@@ -1,0 +1,9 @@
+.item {
+  border: chocolate solid 2px;
+  border-radius: 12px;
+  padding: 12px 24px;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
