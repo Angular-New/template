@@ -2,11 +2,15 @@
 
 <ng-template
   #defaultTemplate
+  let-description
+  let-counter="counter"
 >
-  <h3>default template title</h3>
-  <p>default template description</p>
+  <h3>default template title {{ counter }}</h3>
+  <p>{{ description }}</p>
 </ng-template>
 
-<ng-container
-  *ngTemplateOutlet="template || defaultTemplate; context: { $implicit: 'description from parent component' }"
-></ng-container>
+@for (item of items; track item) {
+  <ng-container
+    *ngTemplateOutlet="template || defaultTemplate; context: { $implicit: 'description in template', counter: item }"
+  ></ng-container>
+}

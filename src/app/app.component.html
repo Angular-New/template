@@ -15,7 +15,9 @@
 <ng-template
   #secondoTemplate
   let-description
+  let-counter="counter"
 >
+  <h3>parent template title {{ counter }}</h3>
   <p>{{ description }}</p>
 </ng-template>
 
@@ -45,5 +47,5 @@
 </tmp-primo>
 
 <tmp-secondo
-  [secondo-template]="secondoTemplate"
+  [secondoTemplate]="secondoTemplate"
 ></tmp-secondo>

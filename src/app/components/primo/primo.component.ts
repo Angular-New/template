@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 interface IItem {
   title: string;
@@ -10,7 +10,8 @@ interface IItem {
   standalone: true,
   imports: [],
   templateUrl: './primo.component.html',
-  styleUrl: './primo.component.scss'
+  styleUrl: './primo.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PrimoComponent {
   public readonly items: IItem[] = [

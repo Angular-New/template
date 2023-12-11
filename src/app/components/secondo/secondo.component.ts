@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, Input, TemplateRef } from "@angular/core";
-import { NgTemplateOutlet } from "@angular/common";
+import { ChangeDetectionStrategy, Component, Input, TemplateRef } from '@angular/core';
+import { NgTemplateOutlet } from '@angular/common';
+import { ITemplate } from './template.interface';
 
 @Component({
   selector: 'tmp-secondo',
@@ -12,7 +13,8 @@ import { NgTemplateOutlet } from "@angular/common";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SecondoComponent {
-  @Input('secondo-template') public template!: TemplateRef<{ $implicit: string }>;
+  @Input('secondoTemplate') public template!: TemplateRef<ITemplate>;
 
   public readonly title: string = 'secondo component';
+  public readonly items: number[] = [1, 2, 3];
 }
