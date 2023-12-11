@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { Component } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { RouterOutlet } from "@angular/router";
+import { PrimoComponent } from "./components/primo/primo.component";
 
 @Component({
   selector: 'tmp-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, PrimoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'ng-template';
+  //
 }
