@@ -1,0 +1,12 @@
+<h2>{{ title }}</h2>
+
+<ng-template
+  #defaultTemplate
+>
+  <h3>default template title</h3>
+  <p>default template description</p>
+</ng-template>
+
+<ng-container
+  *ngTemplateOutlet="template || defaultTemplate; context: { $implicit: 'description from parent component' }"
+></ng-container>
